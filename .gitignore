@@ -1,0 +1,11 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+
+# swift package manager
+.build/
+
+# Secrets / config
+Secrets.xcconfig
