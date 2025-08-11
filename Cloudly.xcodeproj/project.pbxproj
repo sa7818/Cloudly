@@ -40,16 +40,6 @@
 			path = Cloudly;
 			sourceTree = "<group>";
 		};
-		56E9EA822E4A270300A345FF /* CloudlyTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CloudlyTests;
-			sourceTree = "<group>";
-		};
-		56E9EA8C2E4A270300A345FF /* CloudlyUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CloudlyUITests;
-			sourceTree = "<group>";
-		};
 		56E9EA9E2E4A2DD100A345FF /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Models;
@@ -112,8 +102,6 @@
 				56E9EA9E2E4A2DD100A345FF /* Models */,
 				56E9EA9C2E4A2A6400A345FF /* .gitignore */,
 				56E9EA742E4A26FE00A345FF /* Cloudly */,
-				56E9EA822E4A270300A345FF /* CloudlyTests */,
-				56E9EA8C2E4A270300A345FF /* CloudlyUITests */,
 				56E9EA732E4A26FE00A345FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -171,9 +159,6 @@
 			dependencies = (
 				56E9EA812E4A270300A345FF /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				56E9EA822E4A270300A345FF /* CloudlyTests */,
-			);
 			name = CloudlyTests;
 			packageProductDependencies = (
 			);
@@ -193,9 +178,6 @@
 			);
 			dependencies = (
 				56E9EA8B2E4A270300A345FF /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				56E9EA8C2E4A270300A345FF /* CloudlyUITests */,
 			);
 			name = CloudlyUITests;
 			packageProductDependencies = (
