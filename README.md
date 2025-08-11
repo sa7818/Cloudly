@@ -22,8 +22,8 @@ the app enables users to search for specific location and, by default,displays t
  - **Bonus** : Chart with a daily forecast by hours ( open-source chart library)
 
 ## Requirements & Guidelines
---**Language:** Swift
-- ** Architecture Pattern:** MVVM
+- **Language:** Swift
+- **Architecture Pattern:** MVVM
 - **Frameworks:** SwiftUI
      
 ## Bonus(Optional)
