@@ -1,5 +1,5 @@
  # ☁️ Cloudly 
- : **Cloudly** is a weather app for iOS(compatible with any version) which integrates with the  [OpenWeatherMap API] (https://openweathermap.org/api)
+ **Cloudly** is a weather app for iOS(compatible with any version) which integrates with the  [OpenWeatherMap API] (https://openweathermap.org/api)
 
 
 the app enables users to search for specific location and, by default,displays the current location's weather.
