@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		56E9EA9D2E4A2A6A00A345FF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 56E9EA9C2E4A2A6400A345FF /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		56E9EA802E4A270300A345FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		56E9EA722E4A26FE00A345FF /* Cloudly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cloudly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E9EA7F2E4A270300A345FF /* CloudlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E9EA892E4A270300A345FF /* CloudlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56E9EA9C2E4A2A6400A345FF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +48,31 @@
 		56E9EA8C2E4A270300A345FF /* CloudlyUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CloudlyUITests;
+			sourceTree = "<group>";
+		};
+		56E9EA9E2E4A2DD100A345FF /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56E9EA9F2E4A2DDA00A345FF /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		56E9EAA02E4A2DEA00A345FF /* ViewModels */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		56E9EAA12E4A2DF300A345FF /* Utilities */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		56E9EAA32E4A2E0500A345FF /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +105,12 @@
 		56E9EA692E4A26FE00A345FF = {
 			isa = PBXGroup;
 			children = (
+				56E9EAA32E4A2E0500A345FF /* Services */,
+				56E9EAA12E4A2DF300A345FF /* Utilities */,
+				56E9EAA02E4A2DEA00A345FF /* ViewModels */,
+				56E9EA9F2E4A2DDA00A345FF /* Views */,
+				56E9EA9E2E4A2DD100A345FF /* Models */,
+				56E9EA9C2E4A2A6400A345FF /* .gitignore */,
 				56E9EA742E4A26FE00A345FF /* Cloudly */,
 				56E9EA822E4A270300A345FF /* CloudlyTests */,
 				56E9EA8C2E4A270300A345FF /* CloudlyUITests */,
@@ -109,6 +145,11 @@
 			);
 			fileSystemSynchronizedGroups = (
 				56E9EA742E4A26FE00A345FF /* Cloudly */,
+				56E9EA9E2E4A2DD100A345FF /* Models */,
+				56E9EA9F2E4A2DDA00A345FF /* Views */,
+				56E9EAA02E4A2DEA00A345FF /* ViewModels */,
+				56E9EAA12E4A2DF300A345FF /* Utilities */,
+				56E9EAA32E4A2E0500A345FF /* Services */,
 			);
 			name = Cloudly;
 			packageProductDependencies = (
@@ -212,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E9EA9D2E4A2A6A00A345FF /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +442,7 @@
 				DEVELOPMENT_TEAM = Y6629C8Q9D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show the local weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +471,7 @@
 				DEVELOPMENT_TEAM = Y6629C8Q9D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show the local weather.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

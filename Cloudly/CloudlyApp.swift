@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct CloudlyApp: App {
+struct WeatherCastApp: App {
+    @StateObject private var app = AppState()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(app)
         }
     }
 }
