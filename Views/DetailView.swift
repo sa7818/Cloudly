@@ -9,65 +9,92 @@
 import SwiftUI
 import Charts
 
+// Screen that shows details for a single day:
+// - Key metrics (humidity, pressure, wind, visibility)
+// - An hourly temperature chart for that day
 
 struct DetailView: View {
-    let day: DailySummary
-    let current: CurrentWeather?
+    let day: DailySummary // The selected day's summary (min/max, entries, etc.)
+    let current: CurrentWeather? // "Right now" weather
 
     var body: some View {
         ZStack {
-          
+            // Sky blue gradient background (fills entire screen)
             LinearGradient(
                 gradient: Gradient(colors: [
-                    Color(red: 0.53, green: 0.81, blue: 0.98),
-                    Color(red: 0.69, green: 0.93, blue: 0.93)
+                    Color(red: 0.53, green: 0.81, blue: 0.98), // light sky blue
+                    Color(red: 0.69, green: 0.93, blue: 0.93) // lighter cyan
                 ]),
                 startPoint: .top,
                 endPoint: .bottom
             )
             .ignoresSafeArea()
 
-         
+            // Content scrolls if it gets taller than the screen
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                  
+                    // Big day title, e.g. "Tue, Aug 8"
                     Text(Fmt.day.string(from: day.date))
                         .font(.title)
                         .bold()
-
-                   
+                    // Use the first 3-hour entry from this day as our "reference" for metrics
+                    // (If it's missing, we fall back to `current` where possible)
                     let ref = day.entries.first
                     metricGrid(ref)
 
-                  
+                    // Hourly temperature chart (only if we have entries for this day)
                     if !day.entries.isEmpty {
                         Text("Hourly").font(.headline)
-                 
+                        // Charts: plot one point per forecast entry (every ~3 hours)
                         Chart(day.entries, id: \.id) { e in
                             let d = Date(timeIntervalSince1970: e.dt)
-                           
+                            // Draw a line connecting temperature points over the day
                             LineMark(
                                 x: .value("Time", Fmt.hour.string(from: d)),
                                 y: .value("Temp (°C)", e.main.temp)
                             )
                             .foregroundStyle(.black)
-                          
+                            // Draw a dot at each hourly point
+
                             PointMark(
                                 x: .value("Time", Fmt.hour.string(from: d)),
                                 y: .value("Temp (°C)", e.main.temp)
                             )
+                            .foregroundStyle(.black)
                         }
-                        .frame(height: 220)
+                        .frame(height: 220) // Chart height
+                        .chartXAxis {
+                                AxisMarks { value in
+                                    AxisGridLine(stroke: StrokeStyle(lineWidth: 0.5))
+                                        .foregroundStyle(.black)
+                                    AxisTick()
+                                        .foregroundStyle(.black)
+                                    AxisValueLabel()
+                                        .foregroundStyle(.black)
+                                }
+                            }
+                        .chartYAxis {
+                                AxisMarks { value in
+                                    AxisGridLine(stroke: StrokeStyle(lineWidth: 0.5))
+                                        .foregroundStyle(.black)
+                                    AxisTick()
+                                        .foregroundStyle(.black)
+                                    AxisValueLabel()
+                                        .foregroundStyle(.black)
+                                }
+                            }
                     }
                 }
-                .padding()
+                .padding() // Outer padding for the content
             }
         }
+        // Standard inline navigation title for this screen
         .navigationTitle("Details")
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    
+    // Builds a 2x2 grid of metric cards (Humidity, Pressure, Wind, Visibility)
+    // We prefer values from the day's first entry; if not available, fall back to `current`.
     @ViewBuilder
     private func metricGrid(_ e: ForecastResponse.Entry?) -> some View {
         let humidity = e?.main.humidity ?? Double(Int(current?.main.humidity ?? 0))
@@ -86,7 +113,7 @@ struct DetailView: View {
             }
         }
     }
-
+    // One metric card: small title + big value, styled as a rounded tile.
     private func metric(_ title: String, _ value: String) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(title).font(.caption).foregroundStyle(.secondary)
