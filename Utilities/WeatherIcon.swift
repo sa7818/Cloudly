@@ -4,6 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
+// Maps weather condition codes from the API to local SF Symbols or image assets.
 
 import SwiftUI
 

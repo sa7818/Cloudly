@@ -4,7 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
-
+//Converts raw values (timestamps, temperatures, wind speed) into user-friendly text.
 import Foundation
 
 // A central place to keep all our formatters and formatting helper functions.

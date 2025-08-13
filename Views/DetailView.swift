@@ -4,7 +4,10 @@
 //
 //  Created by Sara on 2025-08-11.
 //
-//DetailView = Drill-down for a selected day (metrics + hourly chart)
+
+/** What it does:
+       -  Shows detailed daily forecast: Wind Speed, Humidity, Pressure, Visibility.
+       -  Includes a Swift Charts graph for hourly temperatures.*/
 
 import SwiftUI
 import Charts

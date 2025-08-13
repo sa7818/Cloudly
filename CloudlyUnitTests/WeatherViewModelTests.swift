@@ -4,7 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
-
+//UI-level validation for app launch and key flows.
 import XCTest
 import CoreLocation
 @testable import Cloudly

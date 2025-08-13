@@ -4,6 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
+//Geocoding.swift — Represents search results for city name → coordinates.
 
 import Foundation
 

@@ -4,7 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
-
+//CurrentWeather.swift — Defines the data structure for the current conditions.
 
 import Foundation
 

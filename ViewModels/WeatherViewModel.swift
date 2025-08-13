@@ -4,8 +4,13 @@
 //
 //  Created by Sara on 2025-08-11.
 //
-//WeatherViewModel = Handles all weather data fetching and state
-
+/**
+ What it does:
+ - Handles API requests to OpenWeatherMap for current and forecast data.
+ - Parses JSON into strongly typed Model structs (CurrentWeather, Forecast).
+ - Formats values for display (via Formatters).
+ - Async/await ensures non-blocking UI updates.
+ */
 import Foundation
 import CoreLocation
 

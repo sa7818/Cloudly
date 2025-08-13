@@ -4,7 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
-
+//Forecast.swift — Represents daily & hourly forecast entries.
 
 import Foundation
 //Call 5 day / 3 hour forecast data https://openweathermap.org/forecast5

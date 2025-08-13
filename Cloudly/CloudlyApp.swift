@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct WeatherCastApp: App {
+    //Declares the main app entry point and injects the shared AppState as an @StateObject into the environment.
     @StateObject private var app = AppState()
 
     var body: some Scene {
