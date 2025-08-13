@@ -4,7 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
-
+//AppState = Central place for storing selected city & coordinates
 import Foundation
 import CoreLocation
 

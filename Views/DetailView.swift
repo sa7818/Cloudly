@@ -4,10 +4,11 @@
 //
 //  Created by Sara on 2025-08-11.
 //
-
+//DetailView = Drill-down for a selected day (metrics + hourly chart)
 
 import SwiftUI
 import Charts
+
 
 // Screen that shows details for a single day:
 // - Key metrics (humidity, pressure, wind, visibility)
@@ -46,16 +47,17 @@ struct DetailView: View {
                     if !day.entries.isEmpty {
                         Text("Hourly").font(.headline)
                         // Charts: plot one point per forecast entry (every ~3 hours)
+                        //Chart maps each entry: X = hour, Y = temperature, then draws LineMark + PointMark.
                         Chart(day.entries, id: \.id) { e in
                             let d = Date(timeIntervalSince1970: e.dt)
                             // Draw a line connecting temperature points over the day
                             LineMark(
-                                x: .value("Time", Fmt.hour.string(from: d)),
-                                y: .value("Temp (°C)", e.main.temp)
+                                x: .value("Time", Fmt.hour.string(from: d)),  // ← X axis is the hour label
+                                y: .value("Temp (°C)", e.main.temp)  // ← Y axis is the temperature value
                             )
+                            .interpolationMethod(.catmullRom) // The line curves smoothly between points, making the chart look more natural.
                             .foregroundStyle(.black)
                             // Draw a dot at each hourly point
-
                             PointMark(
                                 x: .value("Time", Fmt.hour.string(from: d)),
                                 y: .value("Temp (°C)", e.main.temp)
@@ -63,6 +65,7 @@ struct DetailView: View {
                             .foregroundStyle(.black)
                         }
                         .frame(height: 220) // Chart height
+                        //Make axes/grid black
                         .chartXAxis {
                                 AxisMarks { value in
                                     AxisGridLine(stroke: StrokeStyle(lineWidth: 0.5))

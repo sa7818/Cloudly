@@ -4,6 +4,8 @@
 //
 //  Created by Sara on 2025-08-11.
 //
+//WeatherViewModel = Handles all weather data fetching and state
+
 import Foundation
 import CoreLocation
 

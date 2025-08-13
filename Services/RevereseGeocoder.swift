@@ -4,6 +4,8 @@
 //
 //  Created by Sara on 2025-08-11.
 //
+//ReverseGeocoder = Converts coordinates to a city name
+
 import CoreLocation
 // A tiny helper to turn GPS coordinates into a human-readable city name.
 enum ReverseGeocoder {

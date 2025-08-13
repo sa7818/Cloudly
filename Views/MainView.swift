@@ -4,6 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
+//MainView = User’s entry point (shows current weather + weekly list)
 
 import SwiftUI
 import CoreLocation
@@ -237,7 +238,7 @@ struct MainView: View {
             Text("7-Day Forecast").font(.title3).bold()
             ForEach(vm.days) { day in
                 NavigationLink {
-                    DetailView(day: day, current: vm.current) // pass both daily and current for details
+                    DetailView(day: day, current: vm.current) // We tap a day in the 7-day list and pass its DailySummary to DetailView:
                 } label: { DayRowView(day: day) } // compact day row
                 .buttonStyle(.plain)
                 .padding(.vertical, 4)

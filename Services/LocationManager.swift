@@ -4,6 +4,7 @@
 //
 //  Created by Sara on 2025-08-11.
 //
+//LocationManager = Manages GPS permission & one-time location retrieval
 
 import CoreLocation
 import Combine
