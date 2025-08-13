@@ -67,3 +67,53 @@ Cloudly
 └─  Tests
 ├─ CloudlyUITest.swift → UI test cases
 └─ CloudlyUITestsLaunchTests.swift → Launch test suite
+
+
+## Architecture Diagram (ASCII)
+
+### Components & Dependencies
+```text
++-------------------+         +----------------+
+|   CloudlyApp      |         |   Assets       |
+|  (entry point)    |         |  (icons/bg)    |
++---------+---------+         +-------+--------+
+          |                           ^
+          v  provides @EnvironmentObject          formatting/icons
++---------+---------+        uses         +-------+--------+
+|       AppState    |<--------------------|  Utilities     |
+|  (city + coord)   |                     |  Formatters    |
++---------+---------+                     |  WeatherIcon   |
+          |                                +-------+--------+
+          | selected city/coord                    ^
+          v                                        |
++---------+-----------------------------+          |
+|           SwiftUI Views               |          |
+|  MainView, DetailView, DayRowView     |----------+
+|   - shows current + 7-day forecast               |
+|   - navigates to details                         |
++---------+-----------------------------+          |
+          | binds to @Published state              |
+          v                                        |
++---------+-----------------------------+          |
+|          WeatherViewModel             |          |
+|  - fetch current + forecast (async)   |          |
+|  - group 3h entries into days         |          |
+|  - publish: current, days, errors     |          |
++---------+-----------------------------+          |
+          |                                        |
+          | uses                                   |
+          v                                        |
++-------------------+        +---------------------+-------+
+|   LocationManager |        |      WeatherAPI             |
+| (CoreLocation)    |        |  - current weather          |
+| - permission      |        |  - 3h forecast              |
+| - one-shot coord  |        |  - geocoding search         |
++---------+---------+        +--------------+--------------+
+          |                                   HTTP/JSON
+          v                                        |
++---------+-----------------------------+          v
+|           ReverseGeocoder             |   +--------------+
+|  coord -> "City, Country" string      |   | OpenWeather  |
++---------------------------------------+   |    API       |
+                                            +--------------+
+
