@@ -89,7 +89,7 @@ the app enables users to search for specific location and, by default,displays t
 +---------------------------------------+   |    API       |
                                             +--------------+
 
-```text
+```
 
 
 ## 🧭 Project Structure & System Design
@@ -120,4 +120,4 @@ Cloudly
 ├─ CloudlyUITest.swift → UI test cases
 └─ CloudlyUITestsLaunchTests.swift → Launch test suite
 
-```plaintext
+```
