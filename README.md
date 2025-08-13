@@ -4,6 +4,15 @@
 
 the app enables users to search for specific location and, by default,displays the current location's weather.
 
+# WeatherCast App
+
+## Home Screen
+![Home Screen](assets/Home.png)
+
+## Details Screen
+![Details Screen](assets/Details.png)
+
+
 ## Features
 ## Main Screen
 - Displays the **weather of the current location**, including:
@@ -38,6 +47,8 @@ the app enables users to search for specific location and, by default,displays t
 ### Installation
  Clone the repository:
   **git clone https://github.com/sa7818/Cloudly.git **
+  
+  
   
   
   
@@ -121,3 +132,4 @@ Cloudly
 └─ CloudlyUITestsLaunchTests.swift → Launch test suite
 
 ```
+
