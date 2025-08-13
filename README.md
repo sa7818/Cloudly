@@ -4,7 +4,7 @@
 
 the app enables users to search for specific location and, by default,displays the current location's weather.
 
-# WeatherCast App
+# Cloudly App
 
 ## Home Screen
 ![Home Screen](assets/Home.png)
