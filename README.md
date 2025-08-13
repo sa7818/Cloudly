@@ -43,7 +43,7 @@ the app enables users to search for specific location and, by default,displays t
 # Cloudly App
 
 <p float="left">
-  <img src="Cloudly/Screenshots/Home.jpg" width="300" />
+  <img src="Cloudly/Screenshots/Home.PNG" width="300" />
   <img src="Cloudly/Screenshots/Details.jpg" width="300" />
 </p>
 
