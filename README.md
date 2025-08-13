@@ -7,11 +7,10 @@ the app enables users to search for specific location and, by default,displays t
 # Cloudly App
 
 ## Home Screen
-![Home Screen](assets/Home.jpg)
+![Home Screen]https://github.com/sa7818/Cloudly/tree/main/Cloudly/Assets.xcassets/Home.imageset
 
 ## Details Screen
-![Details Screen](assets/Details.jpg)
-
+![Details Screen] https://github.com/sa7818/Cloudly/tree/main/Cloudly/Assets.xcassets/Details.imageset
 
 
 ## Features
