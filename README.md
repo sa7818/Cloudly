@@ -13,6 +13,7 @@ the app enables users to search for specific location and, by default,displays t
 ![Details Screen](assets/Details.png)
 
 
+
 ## Features
 ## Main Screen
 - Displays the **weather of the current location**, including:
