@@ -42,11 +42,11 @@ the app enables users to search for specific location and, by default,displays t
   
 # Cloudly App
 
-## Home Screen
-![Home Screen](Assets.xcassets/Home.imageset/Home.png)
+### Home Screen
+![Home Screen](Cloudly/Screenshots/Home.png)
 
 ## Details Screen
-![Details Screen](Assets.xcassets/Details.imageset/Details.png)
+![Details Screen](Cloudly/Screenshots/Details.png)
 
   
   
