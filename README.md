@@ -4,15 +4,6 @@
 
 the app enables users to search for specific location and, by default,displays the current location's weather.
 
-# Cloudly App
-
-## Home Screen
-![Home Screen]https://github.com/sa7818/Cloudly/tree/main/Cloudly/Assets.xcassets/Home.imageset
-
-## Details Screen
-![Details Screen] https://github.com/sa7818/Cloudly/tree/main/Cloudly/Assets.xcassets/Details.imageset
-
-
 ## Features
 ## Main Screen
 - Displays the **weather of the current location**, including:
@@ -49,6 +40,14 @@ the app enables users to search for specific location and, by default,displays t
   **git clone https://github.com/sa7818/Cloudly.git **
   
   
+# Cloudly App
+
+## Home Screen
+![Home Screen](Assets.xcassets/Home.imageset/Home.png)
+
+## Details Screen
+![Details Screen](Assets.xcassets/Details.imageset/Details.png)
+
   
   
   
