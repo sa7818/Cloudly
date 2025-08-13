@@ -41,6 +41,7 @@ the app enables users to search for specific location and, by default,displays t
 
 
 ## 🧭 Project Structure & System Design
+```plaintext
 Cloudly
 ├─  Entry & Main UI
 │ ├─ CloudlyApp.swift → App entry point; injects AppState into the environment
