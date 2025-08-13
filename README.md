@@ -69,7 +69,7 @@ Cloudly
 └─ CloudlyUITestsLaunchTests.swift → Launch test suite
 
 
-## Architecture Diagram (ASCII)
+## 🏗️ Architecture Diagram
 
 ### Components & Dependencies
 ```text
